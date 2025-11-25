@@ -1,4 +1,5 @@
-import { Button, Group, useMantineColorScheme } from '@mantine/core';
+import { Group, useMantineColorScheme } from '@mantine/core';
+import { Button } from '@/components/Button/Button';
 
 export function ColorSchemeToggle() {
   const { setColorScheme } = useMantineColorScheme();
