@@ -1,4 +1,10 @@
-import { createTheme, MantineColorsTuple } from '@mantine/core';
+import {
+  createTheme,
+  MantineColorsTuple,
+  MantineTheme,
+  ButtonProps,
+  CSSProperties,
+} from '@mantine/core';
 
 const colors: Record<string, MantineColorsTuple> = {
   primary: [
@@ -101,10 +107,12 @@ export const theme = createTheme({
     '3xl': '1.875rem',
     '4xl': '2.25rem',
   },
-  fontWeights: {
-    regular: 400,
-    medium: 500,
-    bold: 700,
+  other: {
+    fontWeights: {
+      regular: 400,
+      medium: 500,
+      bold: 700,
+    },
   },
   lineHeights: {
     xs: '1.4',
@@ -150,7 +158,10 @@ export const theme = createTheme({
           transition: 'all 0.2s ease',
         },
       },
-      vars: (_, props) => {
+      vars: (
+        _: MantineTheme,
+        props: ButtonProps,
+      ): { root: CSSProperties | undefined } => {
         if (props.size === 'md') {
           return {
             root: {
@@ -164,7 +175,7 @@ export const theme = createTheme({
       },
     },
     TextInput: {
-      styles: (theme) => ({
+      styles: (theme: MantineTheme) => ({
         input: {
           border: `1px solid ${theme.colors.secondary[1]}`,
           '&:focus, &:focusWithin': {
@@ -176,7 +187,7 @@ export const theme = createTheme({
       }),
     },
     Card: {
-      styles: (theme) => ({
+      styles: (theme: MantineTheme) => ({
         root: {
           backgroundColor: theme.white,
           border: `1px solid ${theme.colors.secondary[1]}`,
