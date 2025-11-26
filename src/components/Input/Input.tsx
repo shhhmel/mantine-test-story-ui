@@ -1,5 +1,5 @@
+import { ComponentPropsWithoutRef, forwardRef } from 'react';
 import { TextInput as MantineInput, TextInputProps } from '@mantine/core';
-import { forwardRef, ComponentPropsWithoutRef } from 'react';
 
 type Props = TextInputProps & ComponentPropsWithoutRef<'input'>;
 

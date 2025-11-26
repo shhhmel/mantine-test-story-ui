@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Card } from './Card';
 import { Text } from '@mantine/core';
+import { Card } from './Card';
 
 export default {
   title: 'Components/Card',

@@ -1,5 +1,5 @@
-import { Card as MantineCard, CardProps } from '@mantine/core';
-import { forwardRef, ComponentPropsWithoutRef } from 'react';
+import { ComponentPropsWithoutRef, forwardRef } from 'react';
+import { CardProps, Card as MantineCard } from '@mantine/core';
 
 type Props = CardProps & ComponentPropsWithoutRef<'div'>;
 

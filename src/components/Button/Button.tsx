@@ -1,5 +1,5 @@
-import { Button as MantineButton, ButtonProps } from '@mantine/core';
-import { forwardRef, ComponentPropsWithoutRef } from 'react';
+import { ComponentPropsWithoutRef, forwardRef } from 'react';
+import { ButtonProps, Button as MantineButton } from '@mantine/core';
 
 type Props = ButtonProps & ComponentPropsWithoutRef<'button'>;
 

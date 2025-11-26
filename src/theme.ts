@@ -1,9 +1,9 @@
 import {
+  ButtonProps,
   createTheme,
+  CSSProperties,
   MantineColorsTuple,
   MantineTheme,
-  ButtonProps,
-  CSSProperties,
 } from '@mantine/core';
 
 const colors: Record<string, MantineColorsTuple> = {
@@ -158,10 +158,7 @@ export const theme = createTheme({
           transition: 'all 0.2s ease',
         },
       },
-      vars: (
-        _: MantineTheme,
-        props: ButtonProps,
-      ): { root: CSSProperties | undefined } => {
+      vars: (_: MantineTheme, props: ButtonProps): { root: CSSProperties | undefined } => {
         if (props.size === 'md') {
           return {
             root: {

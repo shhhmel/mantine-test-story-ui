@@ -5,7 +5,12 @@ export function Welcome() {
     <>
       <Title ta="center" mt={100}>
         Welcome to{' '}
-        <Text inherit variant="gradient" component="span" gradient={{ from: 'primary', to: 'accent' }}>
+        <Text
+          inherit
+          variant="gradient"
+          component="span"
+          gradient={{ from: 'primary', to: 'accent' }}
+        >
           Mantine
         </Text>
       </Title>
